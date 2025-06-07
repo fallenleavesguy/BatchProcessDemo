@@ -3,20 +3,102 @@
     <Design.PreviewWith>
         <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}" Width="200">
             <!-- Add Controls for Previewer Here -->
-            <Button Content="Hello World" />
+            <StackPanel Spacing="12">
+                <Button HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Classes="icon" Content="&#xE2C2;"></Label>
+                        <Label Content="Home"></Label>
+                    </StackPanel>
+                </Button>
+
+                <Button HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Classes="icon" Content="&#xe346;"></Label>
+                        <Label Content="Process"></Label>
+                    </StackPanel>
+                </Button>
+                <Button HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Classes="icon" Content="&#xe7f2;"></Label>
+                        <Label Content="Actions"></Label>
+                    </StackPanel>
+                </Button>
+                <Button HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Classes="icon" Content="&#xe3ee;"></Label>
+                        <Label Content="Macros"></Label>
+                    </StackPanel>
+                </Button>
+                <Button HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Classes="icon" Content="&#xeb7a;"></Label>
+                        <Label Content="Reporter"></Label>
+                    </StackPanel>
+                </Button>
+                <Button HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Classes="icon" Content="&#xe03a;"></Label>
+                        <Label Content="History"></Label>
+                    </StackPanel>
+                </Button>
+
+                <Button Grid.Row="1">
+                    <Label Classes="icon" Content="&#xe272;"></Label>
+                </Button>
+                <Button Classes="transparent" Grid.Row="1">
+                    <Label Classes="icon" Content="&#xe272;"></Label>
+                </Button>
+            </StackPanel>
         </Border>
     </Design.PreviewWith>
 
     <!-- Add Styles Here -->
-    
+
+    <Style Selector="Window">
+        <Setter Property="FontFamily" Value="{DynamicResource SourceCodePro}"></Setter>
+    </Style>
+
+    <Style Selector="Label.icon">
+        <Setter Property="FontFamily" Value="{DynamicResource PhosphorFill}"></Setter>
+        <Setter Property="Margin" Value="0 3 5 0"></Setter>
+    </Style>
+
     <Style Selector="Button">
         <Setter Property="FontSize" Value="20"></Setter>
         <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"></Setter>
         <Setter Property="Background" Value="{DynamicResource PrimaryBackground}"></Setter>
+        <Setter Property="CornerRadius" Value="8"></Setter>
+    </Style>
+
+    <Style Selector="Button.transparent">
+        <Setter Property="Background" Value="Transparent"></Setter>
+    </Style>
+    <Style Selector="Button.transparent Label.icon">
+        <Setter Property="FontFamily" Value="{DynamicResource Phosphor}"></Setter>
     </Style>
     
+    <Style Selector="Button /template/ ContentPresenter">
+        <!-- <Setter Property="RenderTransform" Value="scale(1)"></Setter> -->
+        
+        <Setter Property="Transitions">
+            <Transitions>
+                <BrushTransition Property="Background" Duration="0:0:0.1"></BrushTransition>
+                <BrushTransition Property="Foreground" Duration="0:0:0.1"></BrushTransition>
+                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1"></TransformOperationsTransition>
+            </Transitions>
+        </Setter>
+    </Style>
+    
+    <Style Selector="Button.transparent:pointerover /template/ ContentPresenter">
+        <Setter Property="RenderTransform" Value="scale(1.2)"></Setter>
+    </Style>
+
     <Style Selector="Button:pointerover /template/ ContentPresenter">
         <Setter Property="Foreground" Value="{DynamicResource PrimaryHoverForeground}"></Setter>
         <Setter Property="Background" Value="{DynamicResource PrimaryHover}"></Setter>
+    </Style>
+    
+    <Style Selector="Button.transparent:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="Transparent"></Setter>
     </Style>
 </Styles>

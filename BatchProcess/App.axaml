@@ -18,5 +18,10 @@
         
         <SolidColorBrush x:Key="PrimaryHover">#333B5A</SolidColorBrush>
         <SolidColorBrush x:Key="PrimaryHoverForeground">White</SolidColorBrush>
+        
+        <FontFamily x:Key="SourceCodePro">/Assets/Fonts/SourceCodePro-Regular.ttf#Source Code Pro</FontFamily>
+        <FontFamily x:Key="SourceCodeProBold">/Assets/Fonts/SourceCodePro-Bold.ttf#Source Code Pro</FontFamily>
+        <FontFamily x:Key="Phosphor">/Assets/Fonts/Phosphor.ttf#Phosphor</FontFamily>
+        <FontFamily x:Key="PhosphorFill">/Assets/Fonts/Phosphor-Fill.ttf#Phosphor-Fill</FontFamily>
     </Application.Resources>
 </Application>

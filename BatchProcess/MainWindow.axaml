@@ -6,20 +6,54 @@
         Width="1024" Height="600"
         x:Class="BatchProcess.MainWindow"
         Title="BatchProcess">
-        <Grid ColumnDefinitions="Auto, *" Background="{DynamicResource PrimaryBackground}">
-                <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}">
-                       <Grid RowDefinitions="*, Auto">
-                           <StackPanel Spacing="12">
-                               <Image Source="{SvgImage /Assets/Images/logo.svg}" Width="220"></Image>
-                               <Button Content="Home" HorizontalAlignment="Stretch"></Button>
-                               <Button Content="Process" HorizontalAlignment="Stretch"></Button>
-                               <Button Content="Actions" HorizontalAlignment="Stretch"></Button>
-                               <Button Content="Macros" HorizontalAlignment="Stretch"></Button>
-                               <Button Content="Reporter" HorizontalAlignment="Stretch"></Button>
-                               <Button Content="History" HorizontalAlignment="Stretch"></Button>
-                           </StackPanel>
-                           <Button Grid.Row="1" Content="Settings"></Button>
-                       </Grid> 
-                </Border>
-        </Grid>
+    <Grid ColumnDefinitions="Auto, *" Background="{DynamicResource PrimaryBackground}">
+        <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}">
+            <Grid RowDefinitions="*, Auto">
+                <StackPanel Spacing="12">
+                    <Image Source="{SvgImage /Assets/Images/logo.svg}" Width="220"></Image>
+                    <Button HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xE2C2;"></Label>
+                            <Label Content="Home"></Label>
+                        </StackPanel>
+                    </Button>
+
+                    <Button HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xe346;"></Label>
+                            <Label Content="Process"></Label>
+                        </StackPanel>
+                    </Button>
+                    <Button HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xe7f2;"></Label>
+                            <Label Content="Actions"></Label>
+                        </StackPanel>
+                    </Button>
+                    <Button HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xe3ee;"></Label>
+                            <Label Content="Macros"></Label>
+                        </StackPanel>
+                    </Button>
+                    <Button HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xeb7a;"></Label>
+                            <Label Content="Reporter"></Label>
+                        </StackPanel>
+                    </Button>
+                    <Button HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xe03a;"></Label>
+                            <Label Content="History"></Label>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+                
+                <Button Classes="transparent" Grid.Row="1">
+                    <Label Classes="icon" Content="&#xe272;"></Label>
+                </Button>
+            </Grid>
+        </Border>
+    </Grid>
 </Window>
