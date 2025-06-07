@@ -3,7 +3,9 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="BatchProcess/App.axaml" value="BatchProcess/BatchProcess.csproj" />
         <entry key="BatchProcess/MainWindow.axaml" value="BatchProcess/BatchProcess.csproj" />
+        <entry key="BatchProcess/Styles/AppDefaultStyle.axaml" value="BatchProcess/BatchProcess.csproj" />
       </map>
     </option>
   </component>
