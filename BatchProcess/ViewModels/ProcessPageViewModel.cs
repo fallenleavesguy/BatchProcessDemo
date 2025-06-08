@@ -1,6 +1,13 @@
-﻿namespace BatchProcess.ViewModels;
+﻿using BatchProcess.Data;
 
-public partial class ProcessPageViewModel: ViewModelBase
+namespace BatchProcess.ViewModels;
+
+public partial class ProcessPageViewModel: PageViewModel
 {
     public string Test { get; set; } = "Process";
+    
+    public ProcessPageViewModel()
+    {
+        PageNames = ApplicationPageNames.Process;
+    }
 }
