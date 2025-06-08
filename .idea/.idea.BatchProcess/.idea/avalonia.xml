@@ -6,6 +6,8 @@
         <entry key="BatchProcess/App.axaml" value="BatchProcess/BatchProcess.csproj" />
         <entry key="BatchProcess/MainWindow.axaml" value="BatchProcess/BatchProcess.csproj" />
         <entry key="BatchProcess/Styles/AppDefaultStyle.axaml" value="BatchProcess/BatchProcess.csproj" />
+        <entry key="BatchProcess/Views/HomePageView.axaml" value="BatchProcess/BatchProcess.csproj" />
+        <entry key="BatchProcess/Views/Process.axaml" value="BatchProcess/BatchProcess.csproj" />
       </map>
     </option>
   </component>

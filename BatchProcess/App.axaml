@@ -1,8 +1,13 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BatchProcess"
              x:Class="BatchProcess.App"
              RequestedThemeVariant="Default">
     <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+    
+    <Application.DataTemplates>
+        <local:ViewLocator></local:ViewLocator>
+    </Application.DataTemplates>
 
     <Application.Styles>
         <FluentTheme />
@@ -16,7 +21,8 @@
             <GradientStop Offset="1" Color="#151E3E"></GradientStop>
         </LinearGradientBrush>
         
-        <SolidColorBrush x:Key="PrimaryHover">#333B5A</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryHoverBackground">#333B5A</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryActiveBackground">#6633dd</SolidColorBrush>
         <SolidColorBrush x:Key="PrimaryHoverForeground">White</SolidColorBrush>
         
         <FontFamily x:Key="SourceCodePro">/Assets/Fonts/SourceCodePro-Regular.ttf#Source Code Pro</FontFamily>

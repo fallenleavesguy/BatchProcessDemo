@@ -3,6 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:BatchProcess.ViewModels"
+        xmlns:view="clr-namespace:BatchProcess.Views"
         mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
         Width="1024" Height="600"
         x:Class="BatchProcess.MainView"
@@ -14,7 +15,9 @@
     </Design.DataContext>
 
     <Grid ColumnDefinitions="Auto, *" Background="{DynamicResource PrimaryBackground}">
-        <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}">
+        <ContentControl Grid.Column="1" Content="{Binding CurrentPage}">
+        </ContentControl>
+        <Border Grid.Column="0" Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}">
             <Grid RowDefinitions="*, Auto">
                 <StackPanel Spacing="12">
                     <Image PointerPressed="InputElement_OnPointerPressed" Source="{SvgImage /Assets/Images/logo.svg}"
@@ -27,14 +30,14 @@
                     </Image>
 
 
-                    <Button HorizontalAlignment="Stretch">
+                    <Button HorizontalAlignment="Stretch" Classes.active="{Binding HomePageIsActive}" Command="{Binding GoToHomeCommand}">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xE2C2;"></Label>
                             <Label Content="Home" IsVisible="{Binding SideMenuExpanded}"></Label>
                         </StackPanel>
                     </Button>
 
-                    <Button HorizontalAlignment="Stretch">
+                    <Button HorizontalAlignment="Stretch" Classes.active="{Binding ProcessPageIsActive}" Command="{Binding GoToProcessCommand}">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xe346;"></Label>
                             <Label Content="Process" IsVisible="{Binding SideMenuExpanded}"></Label>
