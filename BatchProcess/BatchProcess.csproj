@@ -16,6 +16,7 @@
         <PackageReference Include="Avalonia.Fonts.Inter" Version="11.1.0" />
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.1.0" />
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
     </ItemGroup>
 
     <ItemGroup>
@@ -35,5 +36,11 @@
       <AvaloniaResource Include="Assets\Fonts\SourceCodePro-Bold.ttf" />
       <None Remove="Assets\Fonts\SourceCodePro-Regular.ttf" />
       <AvaloniaResource Include="Assets\Fonts\SourceCodePro-Regular.ttf" />
+      <None Remove="Assets\Images\background-actions.svg" />
+      <AvaloniaResource Include="Assets\Images\background-actions.svg" />
+      <None Remove="Assets\Images\background-settings.svg" />
+      <AvaloniaResource Include="Assets\Images\background-settings.svg" />
+      <None Remove="Assets\Images\icon.svg" />
+      <AvaloniaResource Include="Assets\Images\icon.svg" />
     </ItemGroup>
 </Project>

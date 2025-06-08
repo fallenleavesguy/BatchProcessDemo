@@ -2,54 +2,70 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:BatchProcess.ViewModels"
         mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
         Width="1024" Height="600"
-        x:Class="BatchProcess.MainWindow"
-        Title="BatchProcess">
+        x:Class="BatchProcess.MainView"
+        Title="BatchProcess"
+        x:DataType="vm:MainViewModel">
+
+    <Design.DataContext>
+        <vm:MainViewModel></vm:MainViewModel>
+    </Design.DataContext>
+
     <Grid ColumnDefinitions="Auto, *" Background="{DynamicResource PrimaryBackground}">
         <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}">
             <Grid RowDefinitions="*, Auto">
                 <StackPanel Spacing="12">
-                    <Image Source="{SvgImage /Assets/Images/logo.svg}" Width="220"></Image>
+                    <Image PointerPressed="InputElement_OnPointerPressed" Source="{SvgImage /Assets/Images/logo.svg}"
+                           Width="220"
+                           IsVisible="{Binding SideMenuExpanded}">
+                    </Image>
+                    <Image PointerPressed="InputElement_OnPointerPressed" Source="{SvgImage /Assets/Images/icon.svg}"
+                           Width="22"
+                           IsVisible="{Binding !SideMenuExpanded}">
+                    </Image>
+
+
                     <Button HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xE2C2;"></Label>
-                            <Label Content="Home"></Label>
+                            <Label Content="Home" IsVisible="{Binding SideMenuExpanded}"></Label>
                         </StackPanel>
                     </Button>
 
                     <Button HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xe346;"></Label>
-                            <Label Content="Process"></Label>
+                            <Label Content="Process" IsVisible="{Binding SideMenuExpanded}"></Label>
                         </StackPanel>
                     </Button>
                     <Button HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xe7f2;"></Label>
-                            <Label Content="Actions"></Label>
+                            <Label Content="Actions" IsVisible="{Binding SideMenuExpanded}"></Label>
                         </StackPanel>
                     </Button>
                     <Button HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xe3ee;"></Label>
-                            <Label Content="Macros"></Label>
+                            <Label Content="Macros" IsVisible="{Binding SideMenuExpanded}"></Label>
                         </StackPanel>
                     </Button>
                     <Button HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xeb7a;"></Label>
-                            <Label Content="Reporter"></Label>
+                            <Label Content="Reporter" IsVisible="{Binding SideMenuExpanded}"></Label>
                         </StackPanel>
                     </Button>
                     <Button HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xe03a;"></Label>
-                            <Label Content="History"></Label>
+                            <Label Content="History" IsVisible="{Binding SideMenuExpanded}"></Label>
                         </StackPanel>
                     </Button>
                 </StackPanel>
-                
+
                 <Button Classes="transparent" Grid.Row="1">
                     <Label Classes="icon" Content="&#xe272;"></Label>
                 </Button>

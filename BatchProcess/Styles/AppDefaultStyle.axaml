@@ -57,6 +57,14 @@
     <Style Selector="Window">
         <Setter Property="FontFamily" Value="{DynamicResource SourceCodePro}"></Setter>
     </Style>
+    
+    <Style Selector="Border">
+        <Setter Property="Transitions">
+            <Transitions>
+                <DoubleTransition Property="Width" Duration="0:0:1"></DoubleTransition>
+            </Transitions>
+        </Setter>
+    </Style>
 
     <Style Selector="Label.icon">
         <Setter Property="FontFamily" Value="{DynamicResource PhosphorFill}"></Setter>
