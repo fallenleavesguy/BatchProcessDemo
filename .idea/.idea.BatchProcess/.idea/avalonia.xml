@@ -4,6 +4,7 @@
     <option name="projectPerEditor">
       <map>
         <entry key="BatchProcess/App.axaml" value="BatchProcess/BatchProcess.csproj" />
+        <entry key="BatchProcess/Controls/IconButton.axaml" value="BatchProcess/BatchProcess.csproj" />
         <entry key="BatchProcess/MainView.axaml" value="BatchProcess/BatchProcess.csproj" />
         <entry key="BatchProcess/MainWindow.axaml" value="BatchProcess/BatchProcess.csproj" />
         <entry key="BatchProcess/Styles/AppDefaultStyle.axaml" value="BatchProcess/BatchProcess.csproj" />

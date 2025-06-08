@@ -33,12 +33,11 @@
                     <TextBlock TextWrapping="Wrap"
                                Text="Remove license of BatchProcess from this machine and release the license back to the server">
                     </TextBlock>
-                    <Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">
-                        <StackPanel Orientation="Horizontal">
-                            <Label Classes="icon" Content="&#xe2fe;"></Label>
-                            <Label Content="Release License"></Label>
-                        </StackPanel>
-                    </Button>
+                    <IconButton
+                        IconText="&#xe2fe;"
+                        Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">
+                        <Label Content="Release License"></Label>
+                    </IconButton>
 
                     <!-- Skip Files -->
                     <TextBlock Grid.Row="1" Grid.Column="0" TextWrapping="Wrap"
@@ -64,20 +63,19 @@
                         </TextBlock>
                         <TextBlock TextWrapping="Wrap" Text="* All sub-directories will be searched automatically"></TextBlock>
                     </StackPanel>
-                    <Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">
-                        <StackPanel Orientation="Horizontal">
-                            <Label Classes="icon" Content="&#xe22;"></Label>
-                            <Label Content="+ Folder"></Label>
-                        </StackPanel>
-                    </Button>
+                    <IconButton
+                        IconText="&#xe24a;"
+                        Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">
+                        <Label Content="+ Folder"></Label>
+                    </IconButton>
                 </Grid>
 
                 <ListBox ItemsSource="{Binding LocationPaths}">
-                    
+
                 </ListBox>
             </StackPanel>
         </StackPanel>
-        
+
         <!-- Right Side Content -->
         <StackPanel Grid.Column="1" Grid.Row="1" Spacing="15" Margin="15">
             <!-- SolidWorks Host -->
@@ -85,41 +83,40 @@
                 <Label Content="SolidWorks Host"></Label>
                 <TextBlock TextWrapping="Wrap">
                     BatchProcess can work locally on the current machine, or on any machine accessible
-                    over the network or event internet. 
+                    over the network or event internet.
                     <LineBreak></LineBreak>
                     <LineBreak></LineBreak>
-                    
                     Enter the machines IP Address, network name or localhost for this machine.
                 </TextBlock>
                 <ComboBox></ComboBox>
                 <TextBlock Text="Connection established"></TextBlock>
             </StackPanel>
-            
+
             <!-- PDM Enterprise -->
             <StackPanel Spacing="15">
                 <Label Content="PDM Enterprise"></Label>
-                <TextBlock TextWrapping="Wrap" Text="If you are using PDM Enterprise enter the credentials below and test login. BatchProcess can then automatically handle checking in and out files from PDM Enterprise."></TextBlock>
+                <TextBlock TextWrapping="Wrap"
+                           Text="If you are using PDM Enterprise enter the credentials below and test login. BatchProcess can then automatically handle checking in and out files from PDM Enterprise.">
+                </TextBlock>
                 <Grid ColumnDefinitions="*, *, *">
                     <ComboBox HorizontalAlignment="Stretch"></ComboBox>
                     <TextBox Grid.Column="1"></TextBox>
                     <TextBox Grid.Column="2"></TextBox>
                 </Grid>
                 <StackPanel Orientation="Horizontal">
-                    <Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">
-                        <StackPanel Orientation="Horizontal">
-                            <Label Classes="icon" Content="&#xe23e;"></Label>
-                            <Label Content="Login"></Label>
-                        </StackPanel>
-                    </Button>
-                    <Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">
-                        <StackPanel Orientation="Horizontal">
-                            <Label Classes="icon" Content="&#xe094;"></Label>
-                            <Label Content="Refresh"></Label>
-                        </StackPanel>
-                    </Button>
+                    <IconButton
+                        IconText="&#xe23e;"
+                        HorizontalAlignment="Stretch">
+                        <Label Content="Login"></Label>
+                    </IconButton>
+                    <IconButton
+                        IconText="&#xe094;"
+                        HorizontalAlignment="Stretch">
+                        <Label Content="Refresh"></Label>
+                    </IconButton>
                 </StackPanel>
             </StackPanel>
-            
+
             <!-- Setting Cache -->
             <StackPanel Spacing="15">
                 <Label Content="Setting Cache"></Label>
@@ -130,24 +127,21 @@
                     if you are experiencing issues you can try clearing the cache (this won't remove the license).
                 </TextBlock>
                 <StackPanel Orientation="Horizontal">
-                    <Button HorizontalAlignment="Stretch">
-                        <StackPanel Orientation="Horizontal">
-                            <Label Classes="icon" Content="&#xec54;"></Label>
-                            <Label Content="Clear Cache"></Label>
-                        </StackPanel>
-                    </Button>
-                    <Button HorizontalAlignment="Stretch">
-                        <StackPanel Orientation="Horizontal">
-                            <Label Classes="icon" Content="&#xe20c;"></Label>
-                            <Label Content="Import Cache"></Label>
-                        </StackPanel>
-                    </Button>
-                    <Button HorizontalAlignment="Stretch">
-                        <StackPanel Orientation="Horizontal">
-                            <Label Classes="icon" Content="&#xe5de;"></Label>
-                            <Label Content="Export Cache"></Label>
-                        </StackPanel>
-                    </Button>
+                    <IconButton
+                        IconText="&#xec54;"
+                        HorizontalAlignment="Stretch">
+                        <Label Content="Clear Cache"></Label>
+                    </IconButton>
+                    <IconButton
+                        IconText="&#xe20c;"
+                        HorizontalAlignment="Stretch">
+                        <Label Content="Import Cache"></Label>
+                    </IconButton>
+                    <IconButton
+                        IconText="&#xe5de;"
+                        HorizontalAlignment="Stretch">
+                        <Label Content="Export Cache"></Label>
+                    </IconButton>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
