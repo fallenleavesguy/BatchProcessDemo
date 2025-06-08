@@ -48,6 +48,9 @@
                 <Button Classes="transparent" Grid.Row="1">
                     <Label Classes="icon" Content="&#xe272;"></Label>
                 </Button>
+                <Button Classes="transparent active" Grid.Row="1">
+                    <Label Classes="icon" Content="&#xe272;"></Label>
+                </Button>
             </StackPanel>
         </Border>
     </Design.PreviewWith>
@@ -106,11 +109,12 @@
         <Setter Property="Background" Value="{DynamicResource PrimaryHoverBackground}"></Setter>
     </Style>
     
-    <Style Selector="Button.active /template/ ContentPresenter">
-        <Setter Property="Background" Value="{DynamicResource PrimaryActiveBackground}"></Setter> 
-    </Style>
-    
     <Style Selector="Button.transparent:pointerover /template/ ContentPresenter">
         <Setter Property="Background" Value="Transparent"></Setter>
+    </Style>
+    
+    <Style Selector="Button.active /template/ ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource PrimaryActiveBackground}"></Setter> 
+        <Setter Property="RenderTransform" Value="scale(1)"></Setter>
     </Style>
 </Styles>
